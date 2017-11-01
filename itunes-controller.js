@@ -9,54 +9,29 @@ function ItunesController(){
 
   //Start coding here
   function draw(songList){
-  console.log(songList)
-  }
+    var template = ''
+    for (var i = 0; i < songList.length; i++)
+    {
+    var selection = songList[i]
+    template += `
+    <div class="col-sm-6 outline">
+    <div class="album-price">
+        <h4>${selection.title}</h4>
+        <h7>${selction.price}</h7>
+    </div>
+    <div class="album-art">
+    <img src="${selction.albumArt}">
+    </div>
+    <h5>${selction.artist}</h5>
+    <h5>${selction.collection}</h5>
+    <h5><source src="${selction.preview}" type="audio/mpeg"></h5>
+</div>
+    `
+    }
 
-
-
-
-  
+  document.getElementById('music').innerHTML = template 
 }
 
 
-
-// {title: "Country Grammar (Hot...)", albumArt: "http://is3.mzstatic.com/image/thumb/Music/v4/2e/84…7a-8251-9f21-89c6-172c58d4ddda/source/60x60bb.jpg", artist: "Nelly", collection: "Country Grammar", price: 9.99, …}
-
-// cats = []
-
-// function Cat(name, age, personality, image) {
-//     this.name = name,
-//         this.age = age,
-//         this.personality = personality || 'grumpy'
-//     this.image = image || 'http://lorempixel.com/200/200/cats/'
+draw(songList)
 }
-
-// var garfield = new Cat('Garfield', 22, 'lazy', 'https://pbs.twimg.com/profile_images/451027744361422849/f5KCfGHa_200x200.jpeg')
-// var mittens = new Cat('Mittens', 2)
-// var snibbly = new Cat('Mr. Snibbly', 152)
-// cats.push(garfield, mittens, snibbly)
-
-// function draw(arr) {
-//     var template = ''
-//     for (var i = 0; i < arr.length; i++) {
-//         var cat = arr[i]
-//         template += `
-//         	<div class="col s3 red-border">
-// 				<img src="${cat.image}">
-// 				<h4>${cat.name}</h4>
-// 				<h6>${cat.age}</h6>
-// 				<h6>${cat.personality}</h6>
-//                 <button onclick="meow('${cat.name}')">MEOW!</button>
-// 			</div>
-//         `
-//     }
-//     document.getElementById('my-cats').innerHTML = template
-// }
-
-// globals.meow = function meow(catName){
-//     console.log(catName, 'Meow')
-// }
-
-
-
-// draw(cats)

@@ -34,4 +34,15 @@ right: 0;
 
 .outline {
     outline: #00FF00 dotted thick;
+    padding-left: 40px;
+}
+
+.album-art {
+
+}
+.album-price{
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-between;
+    padding-right: 40px
 }
