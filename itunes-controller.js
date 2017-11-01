@@ -17,14 +17,14 @@ function ItunesController(){
     <div class="col-sm-6 outline">
     <div class="album-price">
         <h4>${selection.title}</h4>
-        <h7>${selction.price}</h7>
+        <h7>${selection.price}</h7>
     </div>
     <div class="album-art">
-    <img src="${selction.albumArt}">
+    <img src="${selection.albumArt}">
     </div>
-    <h5>${selction.artist}</h5>
-    <h5>${selction.collection}</h5>
-    <h5><source src="${selction.preview}" type="audio/mpeg"></h5>
+    <h5>${selection.artist}</h5>
+    <h5>${selection.collection}</h5>
+    <h5><source src="${selection.preview}" type="audio/mpeg"></h5>
 </div>
     `
     }
@@ -33,5 +33,5 @@ function ItunesController(){
 }
 
 
-draw(songList)
+
 }
