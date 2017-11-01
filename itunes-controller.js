@@ -16,7 +16,7 @@ function ItunesController(){
     template += `
     <div class="col-sm-6 outline">
     <div class="album-price">
-        <h4>${selection.title}</h4>
+        <h5>${selection.title}</h5>
         <h7>${selection.price}</h7>
     </div>
     <div class="album-art">
@@ -24,14 +24,21 @@ function ItunesController(){
     </div>
     <h5>${selection.artist}</h5>
     <h5>${selection.collection}</h5>
-    <h5><source src="${selection.preview}" type="audio/mpeg"></h5>
+    <h5><audio controls class='audio'><source src="${selection.preview}" type="audio/mpeg"></audio></h5>
 </div>
     `
     }
 
   document.getElementById('music').innerHTML = template 
 }
-
+document.addEventListener('play', function (e) {
+   var audios = document.getElementsByClassName('audio');
+   for (var i = 0, len = audios.length; i < len; i++) {
+     if (audios[i] != e.target) {
+       audios[i].pause();
+     }
+   }
+ }, true);
 
 
 }
