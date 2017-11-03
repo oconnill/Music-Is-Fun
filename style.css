@@ -34,8 +34,8 @@
 
     
     .outline {
-        outline: #00FF00 dotted thick;
         padding-left: 40px;
+        font-family: Raleway; 
     }
     
     .album-price{
@@ -76,7 +76,7 @@
       .btn-primary {
         color: #fff;
         background-color: #a3a09b;
-\
+
       }
       
       .btn-primary:hover,
