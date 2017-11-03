@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Music Hunter</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Saira+Semi+Condensed:400,700" rel="stylesheet">    
     <link rel="stylesheet" href="style.css" />
 
 </head>
@@ -15,21 +17,23 @@
     <div class="container">
         <div class="row-fluid">
             <div class="span12">
-                <div class="nav">nav area</div>
                 <div class="bg-image">
-                    <img src="iler-stoe-330158.jpg">
-                    <h1>Music Hunter</h1>
+                    <img src="ojmusicisfun.jpg">
+                    <h3>LIVE.<br>
+                    LISTEN.<br>
+                LOVE.</h3>
+
+                    <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
+                        <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
+                            <button type="submit" class="btn btn-primary btn-lg round" id="get-music-button">Get Music</button>
+                        </div>
+                    </form>
+                
                 </div>
-                <div class="main">main area</div>
-            </div>
         </div>
-        <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
-            <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-            <div class="form-group">
-                <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
-                <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
-            </div>
-        </form>
+
 
         <div id="music" class="row">
             <!-- <div class="col-sm-6 outline">
@@ -48,7 +52,6 @@
 
     </div>
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-    <script src="jquery.js"></script>
     <script src="itunes-service.js"></script>
     <script src="itunes-controller.js"></script>
     <script src="app.js"></script>
