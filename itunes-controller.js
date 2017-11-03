@@ -17,7 +17,7 @@ function ItunesController(){
     <div class="col-sm-6 outline">
     <div class="album-price">
         <h5>${selection.title}</h5>
-        <h5>${selection.price}</h5>
+        <h5>$${selection.price}</h5>
     </div>
     <div class="album-art">
     <img src="${selection.albumArt}">

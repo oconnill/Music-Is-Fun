@@ -119,3 +119,8 @@
       .big-number {
           font-family: Raleway; 
       }
+      
+      #get-music-button{
+        background: white;
+        color: #ff8e00; 
+      }
